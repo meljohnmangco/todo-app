@@ -7,8 +7,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const uri = process.env.ATLAS_URI;
+
 mongoose
-    .connect("mongodb://127.0.0.1:27017/todo-mern", { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("MongoDB connected successfully"))
     .catch(console.error);
 
