@@ -1,0 +1,136 @@
+:root {
+  --primary-dark: #14202e;
+  --text-color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ddd;
+}
+
+.is-complete {
+  color: rgb(233, 76, 19) !important;
+  font-weight: bold;
+  position: relative;  
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+.todo {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-dark) ;
+  color: var(--text-color);
+  margin: .6rem 0;  
+  padding-left: 1rem;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+}
+
+.todos{
+  width: 70%;
+}
+
+.delete-todo {
+  width: 30px;
+  height: 30px;
+  margin: .2rem;
+  background: red;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.App {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.addPopUp {
+  position: fixed;
+  padding-bottom: .5rem;
+  top: 85%;
+  left: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 64px;
+  font-weight: 900;
+  color: #fff;
+  font-size: 40px;
+  background-color: #214164;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  z-index: 1001;
+  width: 500px;
+  height: 100;
+  border-radius: 30px;
+  background-color: var(--primary-dark);
+  color: var(--text-color);
+}
+
+.add-todo-input {
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.add-todo-btn {
+  border: none;
+  width: 150px;
+  height: 40px;
+  font-size: 1.2rem;
+  background-color: #153497;
+  color: #fff;
+  float: right;
+  margin-top: 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+}

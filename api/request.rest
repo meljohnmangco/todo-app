@@ -1,0 +1,13 @@
+GET http://localhost:3001/todos
+###
+POST http://localhost:3001/todo/new
+Content-Type: application/json
+
+{
+    "text": "brush teeth"
+}
+###
+DELETE http://localhost:3001/todo/delete/6391da7b3b197c985dd98e26
+
+### 
+PUT http://localhost:3001/todo/complete/6391dad53b197c985dd98e28
